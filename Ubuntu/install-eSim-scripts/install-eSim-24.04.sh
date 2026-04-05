@@ -246,7 +246,7 @@ function installDependency
     pip3 install matplotlib
 
     echo "Installing PyQt5............."
-    pip3 install PyQt5  
+# PyQt5 already provided by apt on Ubuntu 25 ARM  
 
     echo "Installing volare"
     sudo apt-get xz-utils
