@@ -33,7 +33,7 @@ run_version_script() {
     
     # Decide script based on full version
     case $VERSION_ID in
-        "22.04"|"25.04"|"25.10")
+        "22.04")
             if [[ "$FULL_VERSION" == "22.04.4" ]]; then
                 SCRIPT="$SCRIPT_DIR/install-eSim-22.04.sh"
             else
@@ -43,7 +43,7 @@ run_version_script() {
         "23.04")
             SCRIPT="$SCRIPT_DIR/install-eSim-23.04.sh"
             ;;
-        "24.04")
+        "24.04"|"25.04"|"25.10")
             SCRIPT="$SCRIPT_DIR/install-eSim-24.04.sh"
             ;;
         *)
