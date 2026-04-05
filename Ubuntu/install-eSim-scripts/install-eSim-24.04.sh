@@ -268,11 +268,11 @@ function copyKicadLibrary
     fi
 
     # Copy symbol table for eSim custom symbols 
-    cp kicadLibrary/template/sym-lib-table ~/.config/kicad/6.0/
+    [ -d kicadLibrary ] && cp kicadLibrary/template/sym-lib-table ~/.config/kicad/6.0/ || echo "Skipping KiCad symbol table"
     echo "symbol table copied in the directory"
 
     # Copy KiCad symbols made for eSim
-    sudo cp -r kicadLibrary/eSim-symbols/* /usr/share/kicad/symbols/
+    [ -d kicadLibrary ] && sudo cp -r kicadLibrary/eSim-symbols/* /usr/share/kicad/symbols/ || echo "Skipping KiCad symbols copy"
 
     set +e      # Temporary disable exit on error
     trap "" ERR # Do not trap on error of any command
