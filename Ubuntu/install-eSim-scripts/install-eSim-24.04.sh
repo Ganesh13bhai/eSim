@@ -249,7 +249,7 @@ function installDependency
 # PyQt5 already provided by apt on Ubuntu 25 ARM  
 
     echo "Installing volare"
-    sudo apt-get xz-utils
+    sudo apt-get install -y xz-utils
     pip3 install volare
 }
 
