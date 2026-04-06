@@ -1,0 +1,16 @@
+# Build artifacts
+*.o
+*.cm
+*.so
+
+# ngspice build
+release/
+build/
+
+# downloaded tools
+ghdl-*/
+verilator-*/
+
+# temp
+*.log
+*.tmp

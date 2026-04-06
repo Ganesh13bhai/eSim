@@ -65,14 +65,13 @@ function installNghdl
 {
 
     echo "Installing NGHDL..........................."
-    unzip -o nghdl.zip
-    cd nghdl/
-    chmod +x install-nghdl.sh
-
+    unzip -o ../nghdl.zip
+    chmod +x nghdl/install-nghdl.sh
+    cd nghdl && ./install-nghdl.sh --install
     # Do not trap on error of any command. Let NGHDL script handle its own errors.
     trap "" ERR
 
-    ./install-nghdl.sh --install       # Install NGHDL
+    # NGHDL already installed above
         
     # Set trap again to error_exit function to exit on errors
     trap error_exit ERR
